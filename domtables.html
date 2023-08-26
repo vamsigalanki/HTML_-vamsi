@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>tables</title>
+    </head>
+    <body>
+        <label>
+            person
+        </label>
+        <input type="text" id="m">
+        <lable>
+            age
+        </lable>
+        <input type="text" id="k">
+        <button onclick="my()">add preson</button>
+        <table  border="1px solid black">
+                <tr>
+                <th>preson</th>
+                <th>age</th>
+            </tr>
+            <tbody id="r"></tbody>
+        </table>
+        <script>
+            var pName=document.getElementById('m')
+            var pAge=document.getElementById('k')
+            var tab=document.getElementById('r')
+            var people=[];
+            function my()
+            {
+                tab.innerHTML=""
+                var obj={
+                   personName:pName.value,
+                   personAge:pAge.value,
+                };
+                people.push(obj);
+                people.forEach(function(p){
+                    trow=document.createElement('tr');
+                    td=document.createElement('td');
+                    td2=document.createElement('td');
+                    td.innerHTML=p.personName;
+                    td2.innerHTML=p.personAge;
+                    trow.appendChild(td);
+                    trow.appendChild(td2);
+                    tab.appendChild(trow);
+
+                });
+            }
+        </script>
+    </body>
+</html>

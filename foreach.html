@@ -1,0 +1,140 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            /*// for each;
+            //1.For the Given array: [23,34,54,0,4,7] print all the Array values using a for loop. Expected output: 23 34 54 0 4 7
+                 var ar=[23,34,54,0,4,7];
+                 ar.forEach(function(s){
+                    console.log(s);
+                 })
+            //2.print all numbers in an array except the first element. Expected output: 34 54 0 4 7
+                 var ar=[23,34,54,0,4,7];
+                 
+                 ar.forEach(function(s,i){
+                    if(i!==0){
+                        console.log(s,i);
+                    }   
+                 })
+            //3.Print all elements in an array except the last element Expected output: 23 34 54 0 4
+                 var ar=[23,34,54,0,4,7];
+                 ar.forEach(function(s,i){
+                    if(i<=ar.length-2){
+                        console.log(s,i);
+                    }
+                 })
+            //Print only the last 4 elements of an array. Expected output: 54 0 4 7
+            var ar=[23,34,54,0,4,7];
+                 ar.forEach(function(s,i){
+                    if(i!==0 && i!==1){
+                        console.log(s);
+                    }
+                 })
+            //For the Given array: [23,34,54,10,4,7] print values that are greater than the given number. Given number: 20, Expected output: 23,34,54
+            var ar=[23,34,54,0,4,7];
+            ar.forEach(function(s,i){
+                    if(s>20){
+                        console.log(s);
+                    }
+            })
+            //For the Given array: [23,34,54,10,4,7] print all the even numbers in an Array. Expected output: 34,54,10,4
+              var ar=[23,34,54,10,4,7];
+              ar.forEach(function(s,i){
+                if(s%2==0){
+                    console.log(s);
+                }
+              })
+            //For the Given array: [23,34,54,10,4,7] print all the odd numbers in an Array. Expected output: 23,7
+               var ar=[23,34,54,10,4,7];
+               ar.forEach(function(s,i){
+                if(s%2==1){
+                    console.log(s)
+                }
+               })
+            //For the Given array: [23,-34,-54,10,-4,7] print all the positive numbers in an array. Expected output: 23,10,7
+               var ar=[23,-34,-54,10,-4,7]
+               ar.forEach(function(s,i){
+                if(s>0){
+                    console.log(s)
+                }
+               })
+            //Print only the 2 digit numbers from an array
+            var ar=[1,23,45,99,103,55,987,34];
+            ar.forEach(function(s,i){
+                if(s>9 && s<=99){
+                    console.log(s);
+                }
+            })
+            //Print only multiples of 5 from an array
+             var ar=[5,3,4,10,25,9,55,60];
+             ar.forEach(function(s,i){
+                if(s%5==0){
+                    console.log(s)
+                }
+             })
+             //Print only multiples of 2 AND 3 from an array
+              var ar=[2,4,68,8,3,4,5,6,9,7];
+              ar.forEach(function(s,i){
+                if(s%2==0 && s%3==0){
+                    console.log(s)
+                }
+              })
+              //Print only multiples of 3 OR 5 from an array
+               var ar=[3,6,9,5,15,25,3,10,55,2,8,9];
+               ar.forEach(function(s,i){
+                    if(s%3==0 || s%5==0){
+                        console.log(s)
+                    }
+               })
+
+               //1.For the Given array: [23,34,54,10,4,7] print the minimum number in an Array. Expected output: 4
+                 var ar=[23,34,54,10,4,7];
+                 var min=Infinity
+                 ar.forEach(function(s,i){
+                    if(min>s){
+                        min=s
+                    }
+                 })
+                 console.log(min)
+                //2.For the Given array: [23,34,54,10,4,7] print the Maximum number in an array. Expected output: 54
+                var ar=[23,34,54,10,4,7];
+                var max=-Infinity
+                 ar.forEach(function(s,i){
+                    if(max<s){
+                        max=s
+                    }
+                 })
+                 console.log(max)
+                //3.For the Given array: [23,34,54,10,4,7] sum of all the numbers in an Array. Expected output: 132
+                  var ar=[23,34,54,10,4,7];
+                  var sum=0;
+                  ar.forEach(function(s){
+                    sum=sum+s
+                  })
+                  console.log(sum);
+                //4.For the Given array: [23,34,54,10,4,7] Average of all the numbers in an Array. Expected output: 22
+                var ar=[23,34,54,10,4,7];
+                var sum=0;
+                ar.forEach(function(s){
+                    sum=sum+s
+                    average=sum/6
+                })
+                console.log(average);*/
+                //5.For the Given array: [23,34,54,10,4,7] search if the given number is there in an array or not. Given number: 34, Expected output: true Given number: 26, Expected output: false
+                var ar=[23,34,54,10,4,7];
+                var x=+prompt();
+                var y=false;
+                ar.forEach(function(s){
+                    if(s===x){
+                        y=true;
+                    } 
+                })
+                console.log(y)
+                //6.For the Given array: [23,34,54,10,34,7,23,10,34] print the total number of times an element found in the array. Given number: 23, Expected output: 2 Given number: 34, Expected output: 3 Given number: 10, Expected output: 2 Given number: 54, Expected output: 1
+                var ar=[23,34,54,10,4,7];
+                var count=0;
+                var s=+prompt();
+                ar.forEach(functio)
+        </script>
+    </body>
+</html>

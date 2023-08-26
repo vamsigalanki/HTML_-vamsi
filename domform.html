@@ -1,0 +1,98 @@
+<html>
+    <head></head>
+    <body>
+        <form name="studentform" onsubmit="event.preventDefault()">
+            firstname:
+            <br>
+            <input name="firstname" type="text" onkeyup="updatefirstname(event)">
+            <br>
+            lastname:
+            <br>
+            <input name="lastname" type="text" onkeyup="updatelastname(event)">
+            <br>
+            dob:
+            <br>
+            <input name="dob" type="date" onchange="updatedob(event)">
+            <br>
+             age:
+             <br>
+             <input  name="age" type="age" onkeyup="updateage(event)">
+             <br>
+             gender:<br>
+             <input name="gender" type="radio" value="male" onchange="updategender(event)">male
+             <input name="gender" type="radio" value="female" onchange="updategender(event)">female
+             <input name="gender" type="radio" value="others" onchange="updategender(event)">others
+             <br>
+             courses:<br>
+             <input name="courses" type="checkbox" value="html" onchange="updatecourses(event)">Html
+             <input name="courses" type="checkbox" value="css" onchange="updatecourses(event)">css
+             <input name="courses" type="checkbox" value="javascript" onchange="updatecourses(event)">javascript
+             <input name="courses" type="checkbox" value="nodeJS" onchange="updatecourses(event)">NodeJs<br>
+             selection:<br>
+             <select name="selection" onchange="updateselection(event)">
+                <option name="selection" type="select" value="srilanka" onchange="updateselection(event)">srilanka</option>
+                <option name="selection" type="select" value="uk" onchange="updateselection(event)">uk</option>
+                <option name="selection" type="select" value="india" onchange="updateselection(event)">india</option>
+                <option name="selection" type="select" value="dubai" onchange="updateselection(event)">duabi</option>
+             </select>
+             <br>
+             resume:
+             <input type="file" name="resume" onchange="updateresume(event)"><br>
+             Textarea:
+             <textarea name="textarea" cols="30" rows="10" type="text" onkeyup="updatetextarea(event)"></textarea><br>
+             
+            <button name="button" onclick="abc(event)" >submit</button>
+        </form>
+        <script>
+           var values={
+            firstname:"",
+            lastname:"",
+            dob:"",
+            age:"",
+            gender:"",
+            courses:[],
+            selection:"",
+            textarea:"",
+            resume:"",
+
+        }
+        function updatefirstname(e){
+            values.firstname=e.target.value;
+        }
+        function updatelastname(e){
+            values.lastname=e.target.value;
+        }
+        function updatedob(e){
+            values.dob=e.target.value;
+        }
+        function updateage(e){
+            values.age=e.target.value;
+        }
+        function updategender(e){
+            values.gender=e.target.value;
+        }
+        function updatecourses(e){
+            if(e.target.checked){
+                values.courses.push(e.target.value);
+            }
+            else{
+                var i=values.courses.indexOf(e.target.value)
+                values.courses.splice(i,1);
+            }
+        }
+        function updateselection(e){
+            values.selection=e.target.value;
+        }
+        function updatetextarea(e){
+            values.text=e.target.value;
+        }
+        function updateresume(e){
+            values.resume=e.target.value;
+        }
+            function abc(){
+                console.log(values);
+            }
+            
+        </script>
+    </body>
+</html>

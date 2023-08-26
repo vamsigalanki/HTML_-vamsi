@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>
+            dom sorting
+        </title>
+        <body>
+            
+            <input type="text" id="inp1">
+            <button onclick="addtask()">add task</button>
+            <button onclick="sort()">sort</button>
+            <ul id="task_list"></ul>
+           
+           
+           <script>
+                var inp=document.getElementById('inp1');
+                var tl=document.getElementById('task_list');
+                var tasks=[]
+                function addtask(){
+                    tl.innerHTML=''
+                    tasks.push(inp.value)
+                    genlist(tasks)
+                }
+
+                function genlist(arr){
+                    arr.forEach(function(s,i){
+                        var li= document.createElement("li")
+                        li.innerHTML=s
+                        tl.appendChild(li)
+                    })
+                }
+
+                function sort(){
+
+               tasks.sort(function(a,b){
+                if(a>b){
+                    return 1
+                    
+                }
+                else{
+                    return -1
+                }
+            });
+                    genlist(tasks)
+                }
+            
+                                 
+
+                
+            </script>   
+
+
+            
+
+        </body>
+
+    </head>
+</html>

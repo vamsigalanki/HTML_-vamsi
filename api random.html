@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+        <style>
+            #kl{
+                border: 1px solid blue
+
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="my()">click</button>
+        <div id="kl"></div>
+        <script>
+            var str1="https://api.quotable.io"
+            var str2="random"
+            var g=document.getElementById("kl")
+            function my(){
+                axios.get(`${str1}/${str2}`).then(function(res){
+                    var d=res.data;
+                    console.log(d);
+                    var span=document.createElement("span")
+                    var span2=document.createElement("p")
+                    span.innerHTML=d.content;
+                    span.style.fontSize="50px"
+                    span2.innerHTML=d.author;
+                    span2.style.fontSize="20px"
+                    g.appendChild(span);
+                    g.appendChild(span2);
+                })
+            }
+        </script>
+        
+    </body>
+    
+        
+       
+
+        
+    
+</html>
